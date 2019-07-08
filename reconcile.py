@@ -140,7 +140,7 @@ def jsonpify(obj):
         return jsonify(obj)
 
 
-def search(raw_query, query_type='/SRUfast/all', numRecords = 20, startRecord = 1, returnNum = 20, sortedResults = False):
+def search(raw_query, query_type='/SRUfast/all', numRecords = 20, startRecord = 1, sortedResults = False):
     """
     Hit the FAST API for names.
     """
@@ -204,9 +204,9 @@ def search(raw_query, query_type='/SRUfast/all', numRecords = 20, startRecord = 
     sorted_out = sorted(out, key=itemgetter('score'), reverse=True)
     #Refine only will handle top three matches.
     if sortedResults == True:
-        return sorted_out[:returnNum]
+        return sorted_out
     else:
-        return out[:returnNum]
+        return out
 
 
 @app.route("/reconcile", methods=['POST', 'GET'])
