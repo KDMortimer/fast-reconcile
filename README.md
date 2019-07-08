@@ -10,6 +10,13 @@ Run locally as:
 $ python reconcile.py --debug
 ~~~~
 
+After running locally, visit
+http://localhost:5000/reconcile?query=space
+
+Replace the word space with any query you want.
+
+TODO: How to modify records, queryType?
+
 Michael Stephens wrote a [demo reconcilliation service](https://github.com/mikejs/reconcile-demo) that this code is based on.
 
 ##Changes for this Fork
